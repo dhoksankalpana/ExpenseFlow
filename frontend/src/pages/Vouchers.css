@@ -1467,3 +1467,72 @@
   overflow-y: auto;
   background: #fff;
 }
+
+/* Back to Dashboard Button */
+.vouchers-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #dbe3ef;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Back Button */
+.vouchers-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  transition: all 0.2s ease;
+}
+
+.vouchers-back-button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+  transform: translateX(-2px);
+}
+
+.vouchers-back-button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+.vouchers-back-button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .vouchers-back-button {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}

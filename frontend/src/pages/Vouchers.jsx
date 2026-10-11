@@ -1,7 +1,9 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   AlertCircle,
+  ArrowLeft,
   CheckCircle2,
   Eye,
   FilePlus2,
@@ -172,6 +174,8 @@ function getDepartmentName(voucher) {
 }
 
 function Vouchers() {
+  const navigate = useNavigate();
+
   const [vouchers, setVouchers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -652,6 +656,16 @@ function Vouchers() {
 
   return (
     <div className="vouchers-page">
+      {/* Back to Dashboard button */}
+      <button
+        type="button"
+        className="vouchers-back-button"
+        onClick={() => navigate("/employee/dashboard")}
+      >
+        <ArrowLeft size={18} />
+        <span>Back</span>
+      </button>
+
       <div className="vouchers-header">
         <div>
           <h1>Voucher Management</h1>
